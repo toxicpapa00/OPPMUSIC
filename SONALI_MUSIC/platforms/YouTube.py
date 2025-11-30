@@ -8,20 +8,20 @@ import yt_dlp
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from py_yt import VideosSearch
-from SONALI.utils.database import is_on_off
-from SONALI import app
-from SONALI.utils.formatters import time_to_seconds
+from SONALI_MUSIC.utils.database import is_on_off
+from SONALI_MUSIC import app
+from SONALI_MUSIC.utils.formatters import time_to_seconds
 import random
 import logging
 import aiohttp
-from SONALI import LOGGER
+from SONALI_MUSIC import LOGGER
 from urllib.parse import urlparse
 
 YOUR_API_URL = None
 
 async def load_api_url():
     global YOUR_API_URL
-    logger = LOGGER("SONALI.platforms.Youtube.py")
+    logger = LOGGER("SONALI_MUSIC.platforms.Youtube.py")
     
     try:
         async with aiohttp.ClientSession() as session:
